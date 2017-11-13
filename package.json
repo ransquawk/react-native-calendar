@@ -1,32 +1,86 @@
 {
-  "name": "react-native-calendar",
-  "version": "0.13.1",
-  "description": "Simple Calendar Component for React Native",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:christopherdro/react-native-calendar.git"
+  "_args": [
+    [
+      "react-native-calendar@git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+      "/Users/stplmacmini15/Documents/Projects/BVP/BatterVsPitcher"
+    ]
+  ],
+  "_from": "git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+  "_id": "react-native-calendar@0.12.3",
+  "_inBundle": false,
+  "_inCache": true,
+  "_installable": true,
+  "_integrity": "sha1-MY//EgK319a2GpxLkzg1sYelGGA=",
+  "_location": "/react-native-calendar",
+  "_phantomChildren": {},
+  "_requested": {
+    "hosted": {
+      "directUrl": "https://raw.githubusercontent.com/SystangoTechnologiesInternal/react-native-calendar/master/package.json",
+      "gitUrl": "git://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+      "httpsUrl": "git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+      "shortcut": "github:SystangoTechnologiesInternal/react-native-calendar",
+      "ssh": "git@github.com:SystangoTechnologiesInternal/react-native-calendar.git",
+      "sshUrl": "git+ssh://git@github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+      "type": "github"
+    },
+    "name": "react-native-calendar",
+    "raw": "react-native-calendar@git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+    "rawSpec": "git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+    "scope": null,
+    "spec": "git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+    "type": "hosted"
   },
-  "scripts": {
-    "eslint": "eslint ."
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git#68a3fff6544c3f95b751c9accc8eb5ae012ff864",
+  "_shasum": "16050204122ed717a7f10afd0066b33936659020",
+  "_shrinkwrap": null,
+  "_spec": "react-native-calendar@git+https://github.com/SystangoTechnologiesInternal/react-native-calendar.git",
+  "_where": "/Users/stplmacmini15/Documents/Projects/BVP/BatterVsPitcher",
+  "author": {
+    "email": "casheghian@gmail.com",
+    "name": "Christopher Dro",
+    "url": "https://github.com/christopherdro"
   },
-  "author": "Christopher Dro <casheghian@gmail.com> (https://github.com/christopherdro)",
+  "bugs": {
+    "url": "https://github.com/christopherdro/react-native-calendar/issues"
+  },
+  "bundleDependencies": false,
   "contributors": [
     {
-      "name": "David Sanderson",
       "email": "coderdave@gmail.com",
+      "name": "David Sanderson",
       "url": "https://github.com/coderdave"
     }
   ],
-  "license": "MIT",
   "dependencies": {
     "moment": ">=2.10.3"
   },
+  "deprecated": false,
+  "description": "Simple Calendar Component for React Native",
   "devDependencies": {
     "babel-eslint": "^4.1.6",
     "eslint": "^2.9.0",
     "eslint-config-airbnb": "7.0.0",
     "eslint-plugin-jsx-a11y": "^0.6.2",
     "eslint-plugin-react": "^4.3.0"
-  }
+  },
+  "gitHead": "68a3fff6544c3f95b751c9accc8eb5ae012ff864",
+  "homepage": "https://github.com/christopherdro/react-native-calendar#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-calendar",
+  "optionalDependencies": {},
+  "readme": "## react-native-calendar\n\nA `<Calendar>` component for React Native\n\nPortrait mode only\n\n## Installation\n\n`npm install react-native-calendar --save`\n\n## Usage\n```javascript\n<Calendar\n  currentMonth={'2015-08-01'}       // Optional date to set the currently displayed month after initialization\n  customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles\n  dayHeadings={Array}               // Default: ['S', 'M', 'T', 'W', 'T', 'F', 'S']\n  eventDates={['2015-07-01']}       // Optional array of moment() parseable dates that will show an event indicator\n  events={[{date:'2015-07-01', ..}]}// Optional array of event objects with a date property and custom styles for the event indicator\n  monthNames={Array}                // Defaults to english names of months\n  nextButtonText={'Next'}           // Text for next button. Default: 'Next'\n  onDateSelect={(date) => this.onDateSelect(date)} // Callback after date selection\n  onSwipeNext={this.onSwipeNext}    // Callback for forward swipe event\n  onSwipePrev={this.onSwipePrev}    // Callback for back swipe event\n  onTouchNext={this.onTouchNext}    // Callback for next touch event\n  onTouchPrev={this.onTouchPrev}    // Callback for prev touch event\n  onTitlePress={this.onTitlePress}  // Callback on title press\n  prevButtonText={'Prev'}           // Text for previous button. Default: 'Prev'\n  removeClippedSubviews={false}     // Set to false for us within Modals. Default: true\n  renderDay={<CustomDay />}         // Optionally render a custom day component\n  scrollEnabled={true}              // False disables swiping. Default: False\n  selectedDate={'2015-08-15'}       // Day to be selected\n  showControls={true}               // False hides prev/next buttons. Default: False\n  showEventIndicators={true}        // False hides event indicators. Default:False\n  startDate={'2015-08-01'}          // The first month that will display. Default: current month\n  titleFormat={'MMMM YYYY'}         // Format for displaying current month. Default: 'MMMM YYYY'\n  today={'2017-05-16'}              // Defaults to today\n  weekStart={1} // Day on which week starts 0 - Sunday, 1 - Monday, 2 - Tuesday, etc, Default: 1\n/>\n```\n\n## Available custom styles\n\nThere are a number of pre-defined styles in the calendar. Below, we will give an example of how each of them can be changed depending on your use case.\n\n### calendarContainer\n\n`calendarContainer` changes the background of the calendar.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    calendarContainer: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![calendarContainer](images/calendarContainer.png)\n\n### calendarControls\n\n`calendarControls` changes only the bar on the top that contains the month and year by default, but can also contain controls for changing the month.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    calendarControls: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![calendarControls](images/calendarControls.png)\n\n### calendarHeading\n\n`calendarHeading` changes the bar that contains the days of the week.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    calendarHeading: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![calendarHeading](images/calendarHeading.png)\n\n### controlButton\n\n`controlButton` shows the next and previous buttons that allow you to change the current month. The `showControls` prop must be passed through to `<Calendar />` in order for this style to take effect.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    controlButton: {\n      backgroundColor: 'blue',\n    },\n  }\n  return (\n    <Calendar\n      showControls\n      customStyle={customStyle} />\n  )\n}\n```\n\n![controlButton](images/controlButton.png)\n\n### controlButtonText\n\n`controlButtonText` applies styles to the text that is rendered when the `showControls` prop is `true`. The text can also be changed using the `prevButtonText` and `nextButtonText` props.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    controlButtonText: {\n      color: 'blue',\n    },\n  }\n  return (\n    <Calendar\n      showControls\n      customStyle={customStyle} />\n  )\n}\n```\n\n![controlButtonText](images/controlButtonText.png)\n\n### currentDayCircle\n\n`currentDayCircle` changes the style of the background behind the currently-selected day *when the currently-selected day is today*.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    currentDayCircle: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![currentDayCircle](images/currentDayCircle.png)\n\n### currentDayText\n\n`currentDayText` changes the style of the current day (defaults to `red`) to differentiate it from other days.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    currentDayText: {\n      color: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![currentDayText](images/currentDayText.png)\n\n### day\n\n`day` changes the text of every day other than today and weekend days.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    day: {\n      color: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![day](images/day.png)\n\n### dayButton\n\n`dayButton` changes the background behind all valid days.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    dayButton: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![dayButton](images/dayButton.png)\n\n### dayButtonFiller\n\n`dayButtonFiller` styles the background behind all invalid days.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    dayButtonFiller: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![dayButtonFiller](images/dayButtonFiller.png)\n\n### dayCircleFiller\n\n`dayCircleFiller` styles a circle around all days other than the active day.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    dayCircleFiller: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![dayCircleFiller](images/dayCircleFiller.png)\n\n### dayHeading\n\n`dayHeading` styles the text for non-weekend days in the day of the week bar.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    dayHeading: {\n      color: 'blue',\n    },\n  }\n  return (\n    <Calendar\n    showEventIndicators\n    customStyle={customStyle} />\n  )\n}\n```\n\n![dayHeading](images/dayHeading.png)\n\n### eventIndicator\n\n`eventIndicator` styles the event indicator bubble for days that have events. Must pass either an `events` array or `eventDates` array and have `showEventIndicators` passed as `true` for the event indicators to display.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    eventIndicator: {\n      backgroundColor: 'blue',\n      width: 10,\n      height: 10,\n    },\n  }\n  return (\n    <Calendar\n      showEventIndicators\n      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}\n      customStyle={customStyle} />\n  )\n}\n```\n\n![eventIndicator](images/eventIndicator.png)\n\n### eventIndicatorFiller\n\n`eventIndicatorFiller` styles the event indicator space for days that do not have events. Must pass `showEventIndicators` as `true` for the event indicators to display.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    eventIndicatorFiller: {\n      backgroundColor: 'blue',\n      width: 10,\n      height: 10,\n    },\n  }\n  return (\n    <Calendar\n      showEventIndicators\n      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}\n      customStyle={customStyle} />\n  )\n}\n```\n\n![eventIndicatorFiller](images/eventIndicatorFiller.png)\n\n### hasEventCircle\n\n`hasEventCircle` styles the circle around the days that have events associated with them. Must pass either an `events` array or `eventDates` array and have `showEventIndicators` passed as `true` for the event indicators to display.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    hasEventCircle: {\n      backgroundColor: 'blue',\n    },\n  }\n  return (\n    <Calendar\n      showEventIndicators\n      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}\n      customStyle={customStyle} />\n  )\n}\n```\n\n![hasEventCircle](images/hasEventCircle.png)\n\n### hasEventDaySelectedCircle\n\n`hasEventDaySelectedCircle` styles the circle around the selected day that have events associated with them. Must pass either an `events` array or `eventDates` array and have `showEventIndicators` passed as `true` for the event indicators to display.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    hasEventCircle: {\n      backgroundColor: 'blue',\n    },\n    hasEventDaySelectedCircle: {\n      backgroundColor: 'red',\n  \t},\n  }\n  return (\n    <Calendar\n      showEventIndicators\n      eventDates={['2016-12-03', '2016-12-21', '2016-12-22', '2016-12-30']}\n      customStyle={customStyle} />\n  )\n}\n```\n\n<img src=\"images/hasEventDaySelectedCircle.png\" width=\"300em\" />\n\n### hasEventText\n\n`hasEventText` styles the text of the days that have events associated with them. Must pass either an `events` array or `eventDates` array and have `showEventIndicators` passed as `true` for the event indicators to display.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    hasEventText: {\n      backgroundColor: 'blue',\n    },\n  }\n  return (\n    <Calendar\n      showEventIndicators\n      eventDates={['2016-11-01', '2016-11-07', '2016-11-19']}\n      customStyle={customStyle} />\n  )\n}\n```\n\n![hasEventText](images/hasEventText.png)\n\n### monthContainer\n\n`monthContainer` styles the background behind the month.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    monthContainer: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![monthContainer](images/monthContainer.png)\n\n### selectedDayCircle\n\n`selectedDayCircle` styles the circle behind any selected day other than today.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    selectedDayCircle: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![selectedDayCircle](images/selectedDayCircle.png)\n\n### selectedDayText\n\n`selectedDayText` styles the text of the currently-selected day.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    selectedDayText: {\n      color: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![selectedDayText](images/selectedDayText.png)\n\n### title\n\n`title` styles the title at the top of the calendar.\n`titleText` styles text within title.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    title: {\n      color: 'blue',\n    },\n    titleText: {\n      fontSize: 12,\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![title](images/title.png)\n\n### weekendDayButton\n\n`weekendDayButton` styles the weekends background.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    weekendDayButton: {\n      backgroundColor: 'red',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![weekendDayButton](images/weekendDayButton.png)\n\n### weekendDayText\n\n`weekendDayText` styles the text of weekends.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    weekendDayText: {\n      color: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![weekendDayText](images/weekendDayText.png)\n\n### weekendHeading\n\n`weekendHeading` styles the text of the weekend heading.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    weekendHeading: {\n      color: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![weekendHeading](images/weekendHeading.png)\n\n### weekRow\n\n`weekRow` styles the background of the row associated with each week.\n\n```js\nconst Schedule = () => {\n  const customStyle = {\n    weekRow: {\n      backgroundColor: 'blue',\n    },\n  }\n  return <Calendar customStyle={customStyle} />\n}\n```\n\n![weekRow](images/weekRow.png)\n\n## TODOS\n\n- [ ] Improve swipe feature\n- [ ] Landscape support\n- [ ] Language support\n\n## DEMO\n![Demo gif](images/demo.gif)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/christopherdro/react-native-calendar.git"
+  },
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "version": "0.12.3"
 }
